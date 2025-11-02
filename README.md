@@ -8,7 +8,8 @@ Está pensado para ser utilizado como fuente de datos (API estática) en proyect
 ## 🌐 Enlace de la API
 
 📁 JSON público disponible en:  
-👉 **[https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.json](https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.json)**
+👉 **[https://raw.githubusercontent.com/GGabi40/alquilar-api/main/provincias_localidades_argentina.json](https://raw.githubusercontent.com/GGabi40/alquilar-api/main/provincias_localidades_argentina.json
+)**
 
 Podés consumirlo con cualquier cliente HTTP o directamente desde tu frontend usando <code>fetch()</code>.
 
@@ -53,7 +54,7 @@ El JSON tiene la siguiente estructura:
 ### 🟢 Ejemplo básico en JavaScript
 
 ```js
-fetch("https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.json")
+fetch("https://raw.githubusercontent.com/GGabi40/alquilar-api/main/provincias_localidades_argentina.json")
   .then(res => res.json())
   .then(data => {
     const provincias = data.provincias;
@@ -79,7 +80,7 @@ fetch("https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.
 
 <script>
 async function cargarProvincias() {
-  const res = await fetch("https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.json);
+  const res = await fetch("https://raw.githubusercontent.com/GGabi40/alquilar-api/main/provincias_localidades_argentina.json");
   const data = await res.json();
 
   const selectProv = document.getElementById("provincia");
@@ -118,9 +119,9 @@ cargarProvincias();
 ```js
 import axios from "axios";
 
-const url = "https://ggabi40.github.io/alquilar-api/provincias_localidades_argentinas.json";
+const url = "https://raw.githubusercontent.com/GGabi40/alquilar-api/main/provincias_localidades_argentina.json";
 
-axios.get(url).then(res =&gt; {
+axios.get(url).then(res =>; {
   console.log("Provincias:", res.data.provincias.length);
 });
 ```
